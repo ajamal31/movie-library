@@ -36,6 +36,10 @@ const App = () => {
                     placeholder="Search for movies"
                     onChange={(e) => searchMovies(e.target.value)}
                 />
+                <input type="checkbox" id="" name="" value=""></input>
+                <p>Movies</p>
+                <input type="checkbox" id="" name="" value=""></input>
+                <p>TV Shows</p>
             </div>
             {movies?.length > 0 ? (
                 <>

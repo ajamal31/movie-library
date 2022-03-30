@@ -5,6 +5,7 @@ const DEFAULT_IMG_URL =
     "https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie.jpg";
 
 const MovieCard = ({ movie }) => {
+    console.log(movie);
     let release_date = movie.release_date
         ? movie.release_date
         : movie.first_air_date;
