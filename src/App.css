@@ -13,8 +13,8 @@
 }
 
 body {
-    font-family: var(--font-roboto);
-    background: radial-gradient(circle closest-corner at center 125px, rgb(80, 80, 80), rgb(67, 67, 67) 40%) no-repeat;
+    font-family: var(--font-raleway);
+    background: #243b61;
 }
 
 .app {
@@ -89,10 +89,10 @@ h1 {
 .movie {
     width: 300px;
     height: 450px;
-    margin: 1rem;
+    margin: 0.5rem;
 
     position: relative;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     border: none;
 
