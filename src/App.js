@@ -24,7 +24,7 @@ const App = () => {
             const response = await fetch(`${API_URL}&query=${title}`);
             const data = await response.json();
             setMovies(data.results);
-            setSubTitle("");
+            setSubTitle(`Search results for '${title}'`);
         } else {
             setMovies(dailyTrending);
             setSubTitle("Today's Trending Movies & TV Shows");
@@ -34,7 +34,6 @@ const App = () => {
     const getDailyTrending = async () => {
         const response = await fetch(DAILY_TRENDING_URL);
         const data = await response.json();
-        // console.log(data.results);
         setDailyTrending(data.results);
         setMovies(data.results);
         setSubTitle("Today's Trending Movies & TV Shows");
@@ -46,17 +45,12 @@ const App = () => {
 
     return (
         <div className="app">
-            <h1>Movies & TV Shows</h1>
             <div className="search">
                 <input
                     id="keywords"
-                    placeholder="Search"
+                    placeholder="Search..."
                     onChange={(e) => searchMovies(e.target.value)}
                 />
-                {/* <input type="checkbox" id="" name="" value=""></input>
-                <p>Movies</p>
-                <input type="checkbox" id="" name="" value=""></input>
-                <p>TV Shows</p> */}
             </div>
             {movies?.length > 0 ? (
                 <>
