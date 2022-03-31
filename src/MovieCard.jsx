@@ -6,6 +6,16 @@ const IMG_URL = "https://image.tmdb.org/t/p/w500";
 const DEFAULT_IMG_URL =
     "https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie.jpg";
 
+const getComplementaryColor = (color = "") => {
+    const colorPart = color.slice(1);
+    const ind = parseInt(colorPart, 16);
+    let iter = ((1 << (4 * colorPart.length)) - 1 - ind).toString(16);
+    while (iter.length < colorPart.length) {
+        iter = "0" + iter;
+    }
+    return "#" + iter;
+};
+
 const MovieCard = ({ movie }) => {
     let release_date = movie.release_date ? movie.release_date : movie.first_air_date;
     if (release_date && release_date.includes("-")) {
@@ -21,9 +31,15 @@ const MovieCard = ({ movie }) => {
         setImageColour(colour);
     });
 
-    // prominent(poster, { amount: 1, format: "hex" }).then((colour) => {
-    //     console.log(colour); // [241, 221, 63]
-    //     setTextColour(colour);
+    // prominent(poster, { amount: 5, group: 30 }).then((colours) => {
+    // console.log(colours);
+    // colours.sort();
+    // console.log(colours);
+    //     console.log("test");
+    //     // console.log(colour[0].toString()); // [241, 221, 63]
+    //     // setTextColour(`rgb(${colours[5].toString()})`);
+
+    //     setImageColour(`rgb(${colours[4].toString()})`);
     // });
 
     // console.log(imageColour);
@@ -39,8 +55,8 @@ const MovieCard = ({ movie }) => {
                 <img src={poster} alt={movie.title} />
             </div>
             <div style={{ backgroundColor: imageColour }}>
-                <span style={{color:textColour}} >{movie.media_type}</span>
-                <h3 style={{color:textColour}} >
+                <span style={{ color: textColour }}>{movie.media_type}</span>
+                <h3 style={{ color: textColour }}>
                     {title} ({release_date ? release_date : "N/A"})
                 </h3>
             </div>

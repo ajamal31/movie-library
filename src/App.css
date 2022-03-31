@@ -179,6 +179,13 @@ h1 {
     font-size: 18px;
     font-weight: 500;
     mix-blend-mode: overlay;
+    /* background: inherit; */
+    /* background-clip: text; */
+    /* -webkit-background-clip: text; */
+
+    /* filter: invert(1); */
+    /* -webkit-filter: invert(1); */
+    
 }
 
 .movie:hover div:nth-of-type(2) {
