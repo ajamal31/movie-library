@@ -168,15 +168,17 @@ h1 {
     font-size: 10px;
     letter-spacing: 2px;
     font-weight: 500;
-    color: #a7c9a2;
+    color: white;
+    mix-blend-mode: overlay;
 }
 
 .movie div:nth-of-type(3) h3 {
     margin-top: 5px;
     font-family: "Roboto Slab", serif;
-    color: #a7c9a2;
+    color: white;
     font-size: 18px;
     font-weight: 500;
+    mix-blend-mode: overlay;
 }
 
 .movie:hover div:nth-of-type(2) {

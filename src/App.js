@@ -8,14 +8,14 @@ const BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = "83f43ba8ffc90fdc14a69548089ce760";
 const API_URL =
     "https://api.themoviedb.org/3/search/multi?api_key=83f43ba8ffc90fdc14a69548089ce760";
-const TOP_MOVIES_URL =
-    "https://api.themoviedb.org/3/movie/popular?api_key=83f43ba8ffc90fdc14a69548089ce760&language=en-US&page=1";
+// const TOP_MOVIES_URL =
+//     "https://api.themoviedb.org/3/movie/popular?api_key=83f43ba8ffc90fdc14a69548089ce760&language=en-US&page=1";
 const DAILY_TRENDING_URL = `${BASE_URL}/trending/all/day?api_key=${API_KEY}`;
-const WEEKLY_TRENDING_URL = `${BASE_URL}/trending/all/week?api_key=${API_KEY}`;
+// const WEEKLY_TRENDING_URL = `${BASE_URL}/trending/all/week?api_key=${API_KEY}`;
 
 const App = () => {
     const [movies, setMovies] = useState();
-    const [parameters, setParameters] = useState();
+    // const [parameters, setParameters] = useState();
     const [dailyTrending, setDailyTrending] = useState();
     const [subTitle, setSubTitle] = useState();
 
